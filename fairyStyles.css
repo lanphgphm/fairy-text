@@ -1,3 +1,80 @@
 * {
-    background-color:lavender;
+    /* background-color: #fcfbf9; */
+    background-color: white;
+    text-align: center !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #0b0b45;
+    margin-left:0px;
+    margin-right: 0px;
+}
+
+#bigTitle{
+    color:firebrick;
+    font-size: 35px;
+}
+
+textarea{
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+#copyStatus{
+    font-style: italic;
+    font-size: small;
+}
+
+#outputBox{
+    height: fit-content;
+    width: 535px;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+#outterDiv{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.rows{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.columns{
+    float: left;
+}
+
+.left{
+    width: 69%;
+    border-right: 1px solid gray;  
+}
+
+.right{
+    width: 30%;
+}
+
+button{
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    background-color:lightgray;
+    color:#0b0b45;
+    transition-delay: 2ms;
+    transition: 0.1s; 
+}
+
+button:hover {
+    background-color: darkgray;
+    border-color: darkgray;
+    transform: translateY(-1px); 
+}
+
+button:active {
+    transform: translateY(1px); 
+}
+
+#instructionBox{
+    width: 80%;
+    padding-left: 10%;
 }

@@ -10,31 +10,48 @@
     <title> &#129498; fairy text uwu &#10024; </title>
 </head>
 <body>
-    <h1>create your own emojified text!</h1>
-    <p> enter the text in the box & your emojified text will appear
-        below. copy the new text & send it to the person you love 
-        to make the world a better place!
-    </p>
+    <h1 id="bigTitle">create your own &#10024;emojified&#10024; text!</h1>
+    <div id="instructionBox">
+        <p> 
+            (1) enter the emojis you want to use on the right side, each emoji separated by a single whitespace (skip this to use default emojis) <br>
+            (2) enter the plain text in the top box & click 'emojify' <br>
+            (3) copy fairy text & send it to the person you love to make the world a better place!
+        </p>
+    </div>
+    
+    <div class="rows">
+        <div class="columns left" id="leftCol">
+            <h2>enter plain text</h2>
+            <div>
+                <textarea rows="10" cols="65" id="plaintext" placeholder="enter message here" autofocus required></textarea>
+                <br>
+                <button type="button" id="inputButton">emojify</button>
+            </div>
+            <br> 
+            
+            <h2>your fairy text here</h2>
+            <div>
+                <div id="outterDiv">
+                    <div id="outputBox"><output id="outputDisplay">your new text is here</output> </div>   
+                </div>
+                <br>
+                <button type="button" id="copyButton">copy</button> 
+            </div>
+            <p>
+                <p id="copyStatus"></p>that's it! go spread some love now bubu &#128147;
+            </p>
+        </div>
+
+        <div class="columns right" id="rightCol">
+            <h2>customize emoji list</h2>
+            <textarea rows="16" cols="20" id="customEmoji" placeholder="enter custom emojis"></textarea>
+            <br>
+            <button type="button" id="emojiButton">use my emojis</button>
+        </div>
+    </div>
+
     
 
-    <h2>enter plain text</h2>
-    <div>
-        <textarea rows="10" cols="65" id="plaintext" placeholder="enter message here" autofocus required></textarea>
-        <br>
-        <button type="button" id="inputButton">emojify</button>
-    </div>
-    <br> 
-    
-
-    <h2>your fairy text here</h2>
-    <div>
-        <output id="outputDisplay">your new text is here</output>    
-    </div>
-    <p>that's it! go spread some love now bubu &#128147;</p>
-    <hr>
-
-    <script 
-    type="text/javascript" 
-    src="fairyText.js"></script>
+    <script type="text/javascript" src="fairyText.js"></script>
 </body>
 </html>

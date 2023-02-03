@@ -1,8 +1,16 @@
 let plainText="", plainList;
 var fairyList = []; // global list for easy access
+let customEmoji = ""; 
 
 // this is only run when the app first load
-var emojiList = "✨ 🎇 🌟 ⭐ 🌠 💥 🔥 🧨 🥵 🌶️ 🥶 🧊 🍦 😰 ❄️ ⛄ 🌴 🌻 🍀 🍂 🌳 🎋 💚 🥗 🥀 🌸 💟 💓 💗 😍 😻 💝 🤟 💌 💕 😇 🤗 😌 🙌 😃 😁 🤭 😮‍💨 🙄 😔 🙏 😆 🥳 🏇 👉👈 😠 😤 😩 ✨ 🤡 🔥 🎉 ✊ 👌 💅 🤙 🤸 🧚 🧘 💃 🌈 🍊 🍻 🔪 🪓 🤮 😍 🥰 😘 🫶 🤌 💪 🧚‍♀️ 🧚 🧚‍♂️ 🧜‍♀️ 🧜 🧜‍♂️ 💃 🦋 💐 🌷 🌹 🌺 🌸 🪐 💫 ⭐️ 🌟 ✨ ⚡️ 💥 🔥 🌈 ☀️ 🧸 🎁 🎈 🎀 🪄 🎊 🎉 🎐 💌 ❤️ 🤎 💗 🧡 💔 💖 💛 ❤️‍🔥 💘 💚 ❤️‍🩹 💝 💙 ❣️ 💟 💜 💕 💓 💞 🖤 🤍 ♥️".split(" ")
+var emojiCollection = {
+    default: "✨ 🎇 🌟 ⭐ 🌠 💥 🔥 🧨 🥵 🌶️ 🥶 🧊 🍦 😰 ❄️ ⛄ 🌴 🌻 🍀 🍂 🌳 🎋 💚 🥗 🥀 🌸 💟 💓 💗 😍 😻 💝 🤟 💌 💕 😇 🤗 😌 🙌 😃 😁 🤭 😮‍💨 🙄 😔 🙏 😆 🥳 🏇 👉👈 😠 😤 😩 ✨ 🤡 🔥 🎉 ✊ 👌 💅 🤙 🤸 🧚 🧘 💃 🌈 🍊 🍻 🔪 🪓 🤮 😍 🥰 😘 🫶 🤌 💪 🧚‍♀️ 🧚 🧚‍♂️ 🧜‍♀️ 🧜 🧜‍♂️ 💃 🦋 💐 🌷 🌹 🌺 🌸 🪐 💫 ⭐️ 🌟 ✨ ⚡️ 💥 🔥 🌈 ☀️ 🧸 🎁 🎈 🎀 🪄 🎊 🎉 🎐 💌 ❤️ 🤎 💗 🧡 💔 💖 💛 ❤️‍🔥 💘 💚 ❤️‍🩹 💝 💙 ❣️ 💟 💜 💕 💓 💞 🖤 🤍 ♥️",
+    sparkle: "✨ 🌟 ⭐ 🌠 💥 🦋 ✨ 💫",
+    plants: "🌴 🌻 🍀 🍂 🌳 🎋 💚 🥗 🥀 🌸 🌾 💐 🌷 🌹 🪷 🌺 🎋🎋🎍 🪴 🌴 🌳 🌿 🌱",
+    angry: "😠 😡 🤬 🥵 🥶 😒 😏 🙄 👊 🔥 💥 🌪 ⛈ 🌩 😮‍💨 🙄 😔 🙏 👉👈 😤 😩 ✨ 🤡",
+    food: "🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🫐 🍈 🍒 🍑 🥭 🍍 🥥 🥝 🍅 🍆 🥑 🥦 🥬 🥒 🌶 🫑 🌽 🥕 🫒 🧄 🧅 🥔 🍠🥐 🥯 🍞 🥖 🥨 🧀 🥚 🍳 🧈 🥞 🧇 🥓 🥩 🍗 🍖 🦴 🌭 🍔 🍟 🍕 🫓 🥪 🥙 🧆 🌮 🌯 🫔 🥗 🥘 🫕 🥫 🫙 🍝 🍜 🍲 🍛 🍣 🍱 🥟 🦪 🍤 🍙 🍚 🍘 🍥 🥠 🥮 🍢 🍡 🍧 🍨 🍦 🥧 🍩 🧁 🍰 🎂 🍮 🍭 🍬 🍫 🍿 🍪 🌰 🥜 🫘 🍯 🥛 ☕️ 🍵 🧃 🧋 🍺 🍷 🥃 🧊"
+}
+var emojiList = emojiCollection.default.split(" ");
 var n = emojiList.length; 
 
 function getRandIdx(n){
@@ -11,13 +19,30 @@ function getRandIdx(n){
     return randInt; 
 }
 
+document.getElementById("sparkle").onclick = function(){
+    document.getElementById("customEmoji").value = emojiCollection.sparkle;
+}
+
+document.getElementById("plants").onclick = function(){
+    document.getElementById("customEmoji").value = emojiCollection.plants;
+}
+document.getElementById("angry").onclick = function(){
+    document.getElementById("customEmoji").value = emojiCollection.angry;
+}
+document.getElementById("food").onclick = function(){
+    document.getElementById("customEmoji").value = emojiCollection.food;
+}
+document.getElementById("default").onclick = function(){
+    document.getElementById("customEmoji").value = emojiCollection.default;
+}
+
 document.getElementById("inputButton").onclick = function(){
     // getting input string to `plaintext`
     fairyList = [];
     plainText = document.getElementById("plaintext").value.trim();
 
     // getting custom emoji (if any)
-    let customEmoji = []; // reset
+    customEmoji = ""; // reset for each button click
     customEmoji = document.getElementById("customEmoji").value.trim(); 
 
     // only use the custom emojis if the input is not empty 
@@ -27,7 +52,7 @@ document.getElementById("inputButton").onclick = function(){
         n = emojiList.length; 
     }
     else{
-        emojiList = "✨ 🎇 🌟 ⭐ 🌠 💥 🔥 🧨 🥵 🌶️ 🥶 🧊 🍦 😰 ❄️ ⛄ 🌴 🌻 🍀 🍂 🌳 🎋 💚 🥗 🥀 🌸 💟 💓 💗 😍 😻 💝 🤟 💌 💕 😇 🤗 😌 🙌 😃 😁 🤭 😮‍💨 🙄 😔 🙏 😆 🥳 🏇 👉👈 😠 😤 😩 ✨ 🤡 🔥 🎉 ✊ 👌 💅 🤙 🤸 🧚 🧘 💃 🌈 🍊 🍻 🔪 🪓 🤮 😍 🥰 😘 🫶 🤌 💪 🧚‍♀️ 🧚 🧚‍♂️ 🧜‍♀️ 🧜 🧜‍♂️ 💃 🦋 💐 🌷 🌹 🌺 🌸 🪐 💫 ⭐️ 🌟 ✨ ⚡️ 💥 🔥 🌈 ☀️ 🧸 🎁 🎈 🎀 🪄 🎊 🎉 🎐 💌 ❤️ 🤎 💗 🧡 💔 💖 💛 ❤️‍🔥 💘 💚 ❤️‍🩹 💝 💙 ❣️ 💟 💜 💕 💓 💞 🖤 🤍 ♥️".split(" ")
+        emojiList = emojiCollection.default.split(" ");
         n = emojiList.length; 
     }
 
@@ -58,11 +83,14 @@ document.getElementById("inputButton").onclick = function(){
 
 document.getElementById("copyButton").onclick = function(){
     var copiedText = fairyList.join(" "); 
-
     // Copy the text inside the text field
     navigator.clipboard.writeText(copiedText);
-
     // Alert the copied text
     document.getElementById("copyStatus").innerHTML = "(copied to clipboard)";
 }
 
+document.getElementById("instructButton").onclick = function(){
+    const instruction = document.getElementById("instructionBox");
+    if (instruction.style.display == "none") instruction.style.display = "block";
+    else instruction.style.display = "none";
+}

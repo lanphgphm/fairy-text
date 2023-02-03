@@ -1,5 +1,4 @@
 * {
-    /* background-color: #fcfbf9; */
     background-color: white;
     text-align: center !important;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -10,12 +9,17 @@
 
 #bigTitle{
     color:firebrick;
-    font-size: 35px;
+    font-size: 140%;
 }
 
 textarea{
     border: 2px black solid;
     border-radius: 10px;
+    width: 60%;
+}
+
+h2{
+    font-size: 120%;
 }
 
 #copyStatus{
@@ -25,12 +29,12 @@ textarea{
 
 #outputBox{
     height: fit-content;
-    width: 535px;
+    width: 60%;
     border: 2px black solid;
     border-radius: 10px;
 }
 
-#outterDiv{
+#outputDiv{
     width:100%;
     display: flex;
     justify-content: center;
@@ -60,6 +64,8 @@ button{
     padding: 5px;
     background-color:lightgray;
     color:#0b0b45;
+    outline:none;
+    outline-offset: 2px;
     transition-delay: 2ms;
     transition: 0.1s; 
 }
@@ -77,4 +83,5 @@ button:active {
 #instructionBox{
     width: 80%;
     padding-left: 10%;
+    font-size: 75%;
 }

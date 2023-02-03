@@ -1,6 +1,7 @@
 let plainText="", plainList;
 var fairyList = []; // global list for easy access
 
+// this is only run when the app first load
 var emojiList = "✨ 🎇 🌟 ⭐ 🌠 💥 🔥 🧨 🥵 🌶️ 🥶 🧊 🍦 😰 ❄️ ⛄ 🌴 🌻 🍀 🍂 🌳 🎋 💚 🥗 🥀 🌸 💟 💓 💗 😍 😻 💝 🤟 💌 💕 😇 🤗 😌 🙌 😃 😁 🤭 😮‍💨 🙄 😔 🙏 😆 🥳 🏇 👉👈 😠 😤 😩 ✨ 🤡 🔥 🎉 ✊ 👌 💅 🤙 🤸 🧚 🧘 💃 🌈 🍊 🍻 🔪 🪓 🤮 😍 🥰 😘 🫶 🤌 💪 🧚‍♀️ 🧚 🧚‍♂️ 🧜‍♀️ 🧜 🧜‍♂️ 💃 🦋 💐 🌷 🌹 🌺 🌸 🪐 💫 ⭐️ 🌟 ✨ ⚡️ 💥 🔥 🌈 ☀️ 🧸 🎁 🎈 🎀 🪄 🎊 🎉 🎐 💌 ❤️ 🤎 💗 🧡 💔 💖 💛 ❤️‍🔥 💘 💚 ❤️‍🩹 💝 💙 ❣️ 💟 💜 💕 💓 💞 🖤 🤍 ♥️".split(" ")
 var n = emojiList.length; 
 
@@ -14,6 +15,21 @@ document.getElementById("inputButton").onclick = function(){
     // getting input string to `plaintext`
     fairyList = [];
     plainText = document.getElementById("plaintext").value.trim();
+
+    // getting custom emoji (if any)
+    let customEmoji = []; // reset
+    customEmoji = document.getElementById("customEmoji").value.trim(); 
+
+    // only use the custom emojis if the input is not empty 
+    // else restore default 
+    if (customEmoji != ""){
+        emojiList = customEmoji.split(" ");
+        n = emojiList.length; 
+    }
+    else{
+        emojiList = "✨ 🎇 🌟 ⭐ 🌠 💥 🔥 🧨 🥵 🌶️ 🥶 🧊 🍦 😰 ❄️ ⛄ 🌴 🌻 🍀 🍂 🌳 🎋 💚 🥗 🥀 🌸 💟 💓 💗 😍 😻 💝 🤟 💌 💕 😇 🤗 😌 🙌 😃 😁 🤭 😮‍💨 🙄 😔 🙏 😆 🥳 🏇 👉👈 😠 😤 😩 ✨ 🤡 🔥 🎉 ✊ 👌 💅 🤙 🤸 🧚 🧘 💃 🌈 🍊 🍻 🔪 🪓 🤮 😍 🥰 😘 🫶 🤌 💪 🧚‍♀️ 🧚 🧚‍♂️ 🧜‍♀️ 🧜 🧜‍♂️ 💃 🦋 💐 🌷 🌹 🌺 🌸 🪐 💫 ⭐️ 🌟 ✨ ⚡️ 💥 🔥 🌈 ☀️ 🧸 🎁 🎈 🎀 🪄 🎊 🎉 🎐 💌 ❤️ 🤎 💗 🧡 💔 💖 💛 ❤️‍🔥 💘 💚 ❤️‍🩹 💝 💙 ❣️ 💟 💜 💕 💓 💞 🖤 🤍 ♥️".split(" ")
+        n = emojiList.length; 
+    }
 
     // processing input string
     plainList = plainText.split(" ");  
@@ -50,17 +66,3 @@ document.getElementById("copyButton").onclick = function(){
     document.getElementById("copyStatus").innerHTML = "(copied to clipboard)";
 }
 
-document.getElementById("emojiButton").onclick = function(){
-    // getting input from the customEmoji box
-    let customEmoji = []; // reset
-    customEmoji = document.getElementById("customEmoji").value.trim(); 
-
-    // only use the custom emojis if the input is not empty 
-    if (customEmoji != ""){
-        emojiList = customEmoji.split(" ");
-        n = emojiList.length; 
-        console.log(customEmoji); //debug
-        console.log(emojiList); //debug
-        console.log(n); //debug
-    }
-}

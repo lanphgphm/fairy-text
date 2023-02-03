@@ -6,6 +6,7 @@ let customEmoji = "";
 var emojiCollection = {
     default: "✨ 🎇 🌟 ⭐ 🌠 💥 🔥 🧨 🥵 🌶️ 🥶 🧊 🍦 😰 ❄️ ⛄ 🌴 🌻 🍀 🍂 🌳 🎋 💚 🥗 🥀 🌸 💟 💓 💗 😍 😻 💝 🤟 💌 💕 😇 🤗 😌 🙌 😃 😁 🤭 😮‍💨 🙄 😔 🙏 😆 🥳 🏇 👉👈 😠 😤 😩 ✨ 🤡 🔥 🎉 ✊ 👌 💅 🤙 🤸 🧚 🧘 💃 🌈 🍊 🍻 🔪 🪓 🤮 😍 🥰 😘 🫶 🤌 💪 🧚‍♀️ 🧚 🧚‍♂️ 🧜‍♀️ 🧜 🧜‍♂️ 💃 🦋 💐 🌷 🌹 🌺 🌸 🪐 💫 ⭐️ 🌟 ✨ ⚡️ 💥 🔥 🌈 ☀️ 🧸 🎁 🎈 🎀 🪄 🎊 🎉 🎐 💌 ❤️ 🤎 💗 🧡 💔 💖 💛 ❤️‍🔥 💘 💚 ❤️‍🩹 💝 💙 ❣️ 💟 💜 💕 💓 💞 🖤 🤍 ♥️",
     sparkle: "✨ 🌟 ⭐ 🌠 💥 🦋 ✨ 💫",
+    zen: "🥲 😌 😩 ✨ 🧘‍♀️ 🧘 💙 ✅",
     plants: "🌴 🌻 🍀 🍂 🌳 🎋 💚 🥗 🥀 🌸 🌾 💐 🌷 🌹 🪷 🌺 🎋🎋🎍 🪴 🌴 🌳 🌿 🌱",
     angry: "😠 😡 🤬 🥵 🥶 😒 😏 🙄 👊 🔥 💥 🌪 ⛈ 🌩 😮‍💨 🙄 😔 🙏 👉👈 😤 😩 ✨ 🤡",
     food: "🍏 🍎 🍐 🍊 🍋 🍌 🍉 🍇 🍓 🫐 🍈 🍒 🍑 🥭 🍍 🥥 🥝 🍅 🍆 🥑 🥦 🥬 🥒 🌶 🫑 🌽 🥕 🫒 🧄 🧅 🥔 🍠🥐 🥯 🍞 🥖 🥨 🧀 🥚 🍳 🧈 🥞 🧇 🥓 🥩 🍗 🍖 🦴 🌭 🍔 🍟 🍕 🫓 🥪 🥙 🧆 🌮 🌯 🫔 🥗 🥘 🫕 🥫 🫙 🍝 🍜 🍲 🍛 🍣 🍱 🥟 🦪 🍤 🍙 🍚 🍘 🍥 🥠 🥮 🍢 🍡 🍧 🍨 🍦 🥧 🍩 🧁 🍰 🎂 🍮 🍭 🍬 🍫 🍿 🍪 🌰 🥜 🫘 🍯 🥛 ☕️ 🍵 🧃 🧋 🍺 🍷 🥃 🧊"
@@ -22,7 +23,6 @@ function getRandIdx(n){
 document.getElementById("sparkle").onclick = function(){
     document.getElementById("customEmoji").value = emojiCollection.sparkle;
 }
-
 document.getElementById("plants").onclick = function(){
     document.getElementById("customEmoji").value = emojiCollection.plants;
 }
@@ -34,6 +34,9 @@ document.getElementById("food").onclick = function(){
 }
 document.getElementById("default").onclick = function(){
     document.getElementById("customEmoji").value = emojiCollection.default;
+}
+document.getElementById("zen").onclick = function(){
+    document.getElementById("customEmoji").value = emojiCollection.zen;
 }
 
 document.getElementById("inputButton").onclick = function(){

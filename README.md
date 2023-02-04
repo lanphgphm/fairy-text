@@ -1,6 +1,5 @@
-FAIRY TEXT
-
-making texts more ✨expressive✨ by sprinkling in attitude
+# FAIRY TEXT
+*making texts more ✨expressive✨ by sprinkling in attitude*
 
 do you struggle to express your love to your loved ones? do you stay awake at night preparing to tell mom you love her on her birthday, but ended up just saying "happy birthday mom" because you feel anxious or awkward?
 

@@ -105,7 +105,8 @@ document.getElementById("instructButton").onclick = function(){
 // this feature is not working as expected 
 var audioIsOn = false;
 document.getElementById("nhacHaTay").onclick = function(){
-    var audio = new Audio('music/nhacSongHaTay8x.mp3');
+    var audio = new Audio('music/nhacSongHaTay8x.mp3').play();
+    /*
     console.log(audioIsOn);
     if(!audioIsOn) {
         audio.play();
@@ -116,5 +117,6 @@ document.getElementById("nhacHaTay").onclick = function(){
         audio.pause();
         audioIsOn = false;
     }
+    */
 }
 

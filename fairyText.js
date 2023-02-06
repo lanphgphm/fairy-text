@@ -96,27 +96,42 @@ document.getElementById("copyButton").onclick = function(){
     document.getElementById("copyStatus").innerHTML = "(copied to clipboard)";
 }
 
+// var instructionShown = false;
 document.getElementById("instructButton").onclick = function(){
     const instruction = document.getElementById("instructionBox");
-    if (instruction.style.display == "none") instruction.style.display = "block";
-    else instruction.style.display = "none";
+    // when instruction is not shown
+    if (instruction.style.display == "none") 
+    {
+        instruction.style.display = "block";
+        document.getElementById("instructButton").textContent = 'hide instruction';
+    }
+    else 
+    {
+        instruction.style.display = "none";
+        document.getElementById("instructButton").textContent = 'show instruction';
+    }
 }
 
-// this feature is not working as expected 
+// create an Audio object
+var audio = new Audio('music/nhacSongHaTay8x.mp3');
 var audioIsOn = false;
+
 document.getElementById("nhacHaTay").onclick = function(){
-    new Audio('music/nhacSongHaTay8x.mp3').play();
-    /*
+    // new Audio('music/nhacSongHaTay8x.mp3').play();
+    
+    // call audio.play() when audioIsOn = false
     console.log(audioIsOn);
     if(!audioIsOn) {
         audio.play();
         audioIsOn = true;
+        document.getElementById("nhacHaTay").textContent = 'stop music';
     }
-    //audio doesn't turn off when clickerd again 
+    // call audio.pause() when audioIsOn = true
     else if (audioIsOn) {
         audio.pause();
         audioIsOn = false;
+        document.getElementById("nhacHaTay").textContent = 'play music';
     }
-    */
+    
 }
 

@@ -10,4 +10,12 @@ sample:
 2. ck  iu 🌺 oi 🌴 minh 😩 iu 🧜‍♂️ nhau  dc 🧘 8 🌟 ngay\` 😔🤡 roi 💥 do,  8 🦋 ngay\` ❤️ ko 🎉🍀🔥 phai ⭐ la  nhiu\` 🥗😰 nhung 💕 vk 🧘 hanh 🎇 phuc'  lam 🌻 ck 🦋 biet 🧚 ko, 🎈💥 vk  dc 🌺🪓💝 anh ⚡️ iu, 🧸 dc 🙏 anh  chieu 🤸 chuong, 🧡😰 duoc 🙌 anh ⚡️ goi  la 🥵 em 🥗 be' 🎁
 3. vegetblae  is 🎋🎋🎍 my 💚 favorite 🌹 kind 🌹 of  fud, 🍀 i 🌹 eat 🥗🪷 a 🌻 lot  of 🌳 greens 🌱 everyday. 🌴🎋💚 once 🌺 i  go 🪷🍂 vegetblae, 🌳 i 🌳 no 🍀 regretblae 
 
-special thanks to anh Nguyen Phung Nhat Khoi for helping me with this project. 
+## Current version 
+0.11 (first version, completed in 11 days) 
+this project will not receive further updates, as it does its job well enough. 
+
+## Special thanks
+special thanks to anh Nguyễn Phùng Nhật Khôi for helping me with this project. 
+
+## Self-tag 
+personal-project

@@ -1,0 +1,22 @@
+{
+  "name": "fairy-text",
+  "version": "1.0.0",
+  "description": "adding flavor to text via emojis",
+  "main": "fairyText.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lanphgphm/fairy-text.git"
+  },
+  "keywords": [
+    "fun-app"
+  ],
+  "author": "lanphgphm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lanphgphm/fairy-text/issues"
+  },
+  "homepage": "https://github.com/lanphgphm/fairy-text#readme"
+}

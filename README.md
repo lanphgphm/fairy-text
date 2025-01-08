@@ -15,7 +15,4 @@ sample:
 this project will not receive further updates, as it does its job well enough. 
 
 ## Special thanks
-special thanks to anh Nguyễn Phùng Nhật Khôi for helping me with this project, and Đăng Hoàng for making nhạc sống Hà Tây experience more enjoyable. 
-
-## Self-tag 
-personal-project
+special thanks to anh Nguyễn Phùng Nhật Khôi for helping me with this project, and Đăng Hoàng for the nhạc sống Hà Tây experience 
